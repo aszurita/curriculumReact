@@ -25,14 +25,14 @@ function Project({ project }) {
           {
             project.github && (
               <a href={project.github} target="_blank">
-                <img src="/assets/tools/github.png" alt="GITHUB" className='w-6 h-6' />
+                <img src="./assets/tools/github.png" alt="GITHUB" className='w-6 h-6' />
               </a>
             )
           }
           {
             project.link && (
               <a href={project.link} target="_blank">
-                <img src="/assets/tools/link.png" alt="link" className='w-6 h-6' />
+                <img src="./assets/tools/link.png" alt="link" className='w-6 h-6' />
               </a>
             )
           }

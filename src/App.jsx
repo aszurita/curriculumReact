@@ -9,7 +9,7 @@ function App() {
 
 	return (
 		<ThemeProvider>
-			<Router> 
+			<Router basename="/curriculum">
 				<div className='min-h-screen'>
 					<Routes>
 						<Route exact path='/' element={<Home />} />

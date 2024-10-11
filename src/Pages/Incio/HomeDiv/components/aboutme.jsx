@@ -20,7 +20,7 @@ function AboutMe() {
           <span className="hover:text-[#69B3A2]">L</span>
           <span className="hover:text-[#69B3A2]">O</span>
           <span>&nbsp;</span>
-          <img src="/assets/logos/logo.png" alt="" className="w-10 h-10" />
+          <img src="./assets/logos/logo.png" alt="" className="w-10 h-10" />
           <span>&nbsp;</span>
           <span className="hover:text-[#69B3A2]">Z</span>
           <span className="hover:text-[#69B3A2]">U</span>
