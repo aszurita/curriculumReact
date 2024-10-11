@@ -21,8 +21,8 @@ const ParticlesComponent = () => {
       });
     };
 
-    const loadParticles = loadScript('/assets/js/particles.js');
-    const loadStats = loadScript('/assets/js/stats.js');
+    const loadParticles = loadScript('./assets/js/particles.js');
+    const loadStats = loadScript('./assets/js/stats.js');
 
     loadParticles.then(() => {
       if (window.particlesJS) {
