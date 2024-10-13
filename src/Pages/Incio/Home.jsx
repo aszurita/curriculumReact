@@ -17,8 +17,8 @@ function Home() {
                 <section><AreaToolsSkills /></section>
                 <section><Projects /></section>
                 <section><MeExperienceSection /></section>
-                <section><Presentations /></section>
-                <section><ContactMe /></section>
+                <section id="presentations"><Presentations /></section>
+                <section id="contactme"><ContactMe /></section>
             </main>
             <footer className={`h-10 w-full place-content-center place-items-center text-center text-xl py-10`}>
                 <div>

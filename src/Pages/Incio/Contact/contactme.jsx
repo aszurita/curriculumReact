@@ -33,7 +33,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col place-content-center place-items-center w-full" id="contactme">
+    <div className="flex flex-col place-content-center place-items-center w-full">
       <div className="flex flex-col items-center justify-center">
         <h2 className="font-roboto-slab font-bold py-10 text-3xl sm:text-5xl select-none text-center">Contact Me</h2>
       </div>

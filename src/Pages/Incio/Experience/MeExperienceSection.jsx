@@ -7,7 +7,7 @@ function MeExperienceSection() {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
   return (
     <div id="experience" className={`pt-2 ${darkMode ? "bg-black" : "bg-white"} }`}>
-      <h2 className="font-roboto-slab font-bold py-10 text-3xl sm:text-5xl select-none text-center">Experience</h2>
+      <h2 className="font-roboto-slab font-bold pb-10 text-3xl sm:text-5xl select-none text-center pt-20 ">Experience</h2>
       <div className="flex w-full flex-wrap place-content-center ">
         <div className="w-1/3 min-w-[325px]">
           <Profile />

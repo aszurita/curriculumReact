@@ -5,8 +5,8 @@ import "./presentations.css";
 function Presentations() {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
   return (
-    <div className={`pt-2 ${darkMode ? "bg-black" : "bg-white"} }`} id="presentations">
-      <h2 className="font-roboto-slab font-bold py-10 text-3xl sm:text-5xl select-none text-center">Presentations</h2>
+    <div className={`pt-2 ${darkMode ? "bg-black" : "bg-white"} }`}>
+      <h2 className="font-roboto-slab font-bold pb-10 text-3xl sm:text-5xl select-none text-center pt-20">Presentations</h2>
       <div className="div_talk">
         <div className="video_div">
           <video width="500" height="400" controls="yes">
