@@ -3,13 +3,14 @@ import { ThemeContext } from "../Shared/ThemeContext";
 import { Alert } from "@material-tailwind/react";
 
 function ContactForm() {
-  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
-  const [option, setOption] = useState("Collaboration");
+  const { darkMode } = useContext(ThemeContext);
+  const [option, setOption] = useState("Meeting");
   const [message, setMessage] = useState("");
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [otherSubject, setOtherSubject] = useState("");
   const [showAlert, setShowAlert] = useState(false);
+  const [notify, setNotify] = useState(""); // Estado para el radio button
 
   const changeOption = (e) => {
     setOption(e.target.value);
@@ -18,14 +19,15 @@ function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-
     setShowAlert(true);
 
+    // Reset fields after submit
     setFullName("");
     setEmail("");
     setMessage("");
     setOtherSubject("");
-    setOption("Collaboration");
+    setOption("Meeting");
+    setNotify(""); // Resetea el valor del radio button
 
     setTimeout(() => {
       setShowAlert(false);
@@ -83,6 +85,7 @@ function ContactForm() {
                 value={option}
                 onChange={changeOption}
               >
+                <option value="Meeting">In-person Meeting</option>
                 <option value="Collaboration">Collaboration on Projects</option>
                 <option value="Services">Inquiry about Services</option>
                 <option value="Feedback">Feedback</option>
@@ -116,6 +119,38 @@ function ContactForm() {
                 onChange={(e) => setMessage(e.target.value)}
                 required
               />
+            </div>
+
+            <div className="mt-4">
+              <label className={`block mb-2 text-sm font-medium ${darkMode ? "text-white" : "text-black"}`}></label>
+              <div className="flex items-center">
+                <input
+                  type="radio"
+                  id="notify-yes"
+                  name="notify"
+                  value="yes"
+                  checked={notify === "yes"} // Controla si está seleccionado
+                  className="w-4 h-4 text-green-calid focus:ring-green-calid border-gray-300"
+                  onChange={(e) => setNotify(e.target.value)} // Actualiza el estado
+                />
+                <label htmlFor="notify-yes" className={`ml-2 text-sm font-medium ${darkMode ? "text-white" : "text-black"}`}>
+                  Sí
+                </label>
+              </div>
+              <div className="flex items-center mt-2">
+                <input
+                  type="radio"
+                  id="notify-no"
+                  name="notify"
+                  value="no"
+                  checked={notify === "no"} // Controla si está seleccionado
+                  className="w-4 h-4 text-green-calid focus:ring-green-calid border-gray-300"
+                  onChange={(e) => setNotify(e.target.value)} // Actualiza el estado
+                />
+                <label htmlFor="notify-no" className={`ml-2 text-sm font-medium ${darkMode ? "text-white" : "text-black"}`}>
+                  No
+                </label>
+              </div>
             </div>
 
             <div>
