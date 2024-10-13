@@ -37,13 +37,10 @@ function AboutMe() {
           <SocialMedia sm={true} type='github' />
           <SocialMedia sm={true} type='linkedin' />
           <SocialMedia sm={true} type='X' />
-          <SocialMedia sm={false} type='github' />
-          <SocialMedia sm={false} type='linkedin' />
-          <SocialMedia sm={false} type='X' />
         </div>
       </div>
-      <div className={`absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 mt-24 h-40 w-[60%] max-sm:w-[80%] bg-transparent z-10`}>
-        <div className="text-[2vw]  max-sm:text-[3vw] justify-center text-center pt-10 w-full font-roboto-slab" dangerouslySetInnerHTML={{ __html: info.introductoryparagraph }} />
+      <div className={`absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 mt-24 h-40 w-[80%] bg-transparent z-10`}>
+        <div className="text-[2.5vw] justify-center text-center pt-10 w-full font-roboto-slab" dangerouslySetInnerHTML={{ __html: info.introductoryparagraph }} />
       </div>
     </div>
   )

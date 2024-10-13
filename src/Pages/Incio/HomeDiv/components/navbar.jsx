@@ -12,7 +12,7 @@ function NavbarHome() {
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
       <div className="container mx-auto flex justify-between items-center p-4">
-        <a href="#Home" className="ml-4 lg:ml-10" onClick={() => setActiveLink("HOME")}>
+        <a href="#Home" className="ml-4" onClick={() => setActiveLink("HOME")}>
           <span className="font-roboto-slab self-center whitespace-nowrap text-xl text-green-calid">
             ANGELO ZURITA
           </span>
@@ -32,12 +32,12 @@ function NavbarHome() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 6h18M3 12h18M3 18h18" />
           </svg>
         </button>
-        <div className={`lg:flex lg:items-center lg:space-x-6 font-roboto-slab text-xl mr-4 lg:mr-40 select-none ${isMenuOpen ? `block absolute top-full left-0 right-0 ${darkMode ? "bg-black text-white" : "bg-white text-black"}` : 'hidden'}`}>
-          {['TOOLS','PORTFOLIO','EXPERIENCE'].map((item) => (
+        <div className={`lg:flex lg:items-center lg:space-x-6 font-roboto-slab text-xl mr-4 select-none ${isMenuOpen ? `block absolute top-full left-0 right-0 ${darkMode ? "bg-black text-white" : "bg-white text-black"}` : 'hidden'}`}>
+          {['TOOLS','PORTFOLIO','EXPERIENCE',"PRESENTATIONS","CONTACT ME"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(' ', '')}`}
-              className={`block py-2 px-4 border-b border-gray-200 lg:inline-block lg:border-none hover:text-green-calid ${activeLink === item ? "text-green-calid border-green-calid" : ""}`}
+              className={`block py-2 px-2 border-b border-gray-200 lg:inline-block lg:border-none hover:text-green-calid ${activeLink === item ? "text-green-calid border-green-calid" : ""}`}
               onClick={() => {
                 setActiveLink(item);
                 setIsMenuOpen(false);
@@ -47,7 +47,7 @@ function NavbarHome() {
             </a>
           ))}
           <div
-            className="flex items-center cursor-pointer py-2 px-4 border-b border-gray-200 lg:inline-block lg:border-none max-sm:pt-2 max-sm:pr-4 max-sm:pb-2 max-sm:pl-3"
+            className="flex items-center cursor-pointer py-2 px-2 border-b border-gray-200 lg:inline-block lg:border-none max-sm:pt-2 max-sm:pr-4 max-sm:pb-2 max-sm:pl-3"
             onClick={() => {
               toggleDarkMode();
               setIsMenuOpen(false);

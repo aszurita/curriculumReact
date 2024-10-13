@@ -1,0 +1,23 @@
+
+/*Presentations*/
+
+.div_talk{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:5px;
+    padding: 10px 30px;
+}
+.video_div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}

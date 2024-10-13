@@ -1,10 +1,11 @@
-const flowbite = require("flowbite-react/tailwind");
-/** @type {import('tailwindcss').Config} */
-export default {
+const withMT = require("@material-tailwind/react/utils/withMT");
+const flowbite = require("flowbite/plugin");
+
+module.exports = withMT({
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    flowbite.content(),
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}', // Para asegurar que Flowbite esté en el contenido
   ],
   theme: {
     extend:{
@@ -12,7 +13,8 @@ export default {
         'roboto-slab': ['"Roboto Slab"', 'serif'],
         'montserrat':['Montserrat','"Roboto Slab"', 'serif'],
         'comillas': ['"Playfair Display"', 'serif'],
-      },colors: {
+      },
+      colors: {
         'gray': '#F8F9FA',
         'gray-2': '#DCDDDE',
         'green-calid':'#69B3A2',
@@ -20,6 +22,6 @@ export default {
     }
   },
   plugins: [
-    flowbite.plugin(),
+    flowbite, // Para agregar Flowbite como plugin
   ],
-};
+});
