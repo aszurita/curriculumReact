@@ -122,7 +122,7 @@ function ContactForm() {
             </div>
 
             <div className="mt-4">
-              <label className={`block mb-2 text-sm font-medium ${darkMode ? "text-white" : "text-black"}`}></label>
+              <label className={`block mb-2 text-sm font-medium ${darkMode ? "text-white" : "text-black"}`}>Would you like to receive notifications about future projects?</label>
               <div className="flex items-center">
                 <input
                   type="radio"
@@ -134,7 +134,7 @@ function ContactForm() {
                   onChange={(e) => setNotify(e.target.value)} // Actualiza el estado
                 />
                 <label htmlFor="notify-yes" className={`ml-2 text-sm font-medium ${darkMode ? "text-white" : "text-black"}`}>
-                  Sí
+                  Yes
                 </label>
               </div>
               <div className="flex items-center mt-2">

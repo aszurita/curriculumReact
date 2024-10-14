@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
+import { MdOutlineLightMode } from "react-icons/md";
 import { ThemeContext } from "../../Shared/ThemeContext";
 
 function NavbarHome() {
@@ -53,7 +54,7 @@ function NavbarHome() {
               setIsMenuOpen(false);
             }}
           >
-            {darkMode ? <div className="flex flex-row items-center mb-[1px] hover:text-green-calid"> LIGHT MODE <MdOutlineDarkMode size={20} /> </div> : <div className="flex flex-row items-center hover:text-green-calid mb-[1px]"> DARK MODE <MdDarkMode size={20} /> </div>}
+            {darkMode ? <div className="flex flex-row items-center mb-[1px] hover:text-green-calid"> <MdOutlineLightMode size={25} /> </div> : <div className="flex flex-row items-center hover:text-green-calid mb-[1px]"> <MdDarkMode size={25} /> </div>}
           </div>
         </div>
       </div>
