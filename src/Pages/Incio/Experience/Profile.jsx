@@ -19,9 +19,9 @@ function Profile() {
           </div>
         </div>
         <div className="flex place-content-center place-items-center gap-10  max-sm:gap-5">
-          <SocialMedia sm={true} type='github' />
-          <SocialMedia sm={true} type='linkedin' />
-          <SocialMedia sm={true} type='X' />
+          <SocialMedia type='github' />
+          <SocialMedia type='linkedin' />
+          <SocialMedia type='X' />
         </div>
       </div>
     </div>

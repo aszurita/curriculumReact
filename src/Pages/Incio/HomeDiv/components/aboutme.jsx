@@ -34,13 +34,13 @@ function AboutMe() {
           </div>
         </div>
         <div className="flex place-content-center place-items-center gap-10  max-sm:gap-5">
-          <SocialMedia sm={true} type='github' />
-          <SocialMedia sm={true} type='linkedin' />
-          <SocialMedia sm={true} type='X' />
+          <SocialMedia type='github' />
+          <SocialMedia type='linkedin' />
+          <SocialMedia type='X' />
         </div>
       </div>
       <div className={`absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 mt-24 h-40 w-[80%] bg-transparent z-10`}>
-        <div className="text-[2.5vw] justify-center text-center pt-10 w-full font-roboto-slab" dangerouslySetInnerHTML={{ __html: info.introductoryparagraph }} />
+        <div className="text-xs sm:leading-none sm:text-[2vw]  justify-center text-center pt-10 w-full font-roboto-slab" dangerouslySetInnerHTML={{ __html: info.introductoryparagraph }} />
       </div>
     </div>
   )

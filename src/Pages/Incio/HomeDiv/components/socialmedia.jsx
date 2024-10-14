@@ -3,10 +3,10 @@ import { BsTwitterX } from "react-icons/bs";
 import { ThemeContext } from "../../Shared/ThemeContext";
 import { useContext } from 'react';
 
-function SocialMedia({ sm, type }) {
+function SocialMedia({ type }) {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
-  const size_icon = sm ? 20 : 30;
-  const string_className = `rounded-full flex place-content-center place-items-center h-12 w-12 max-sm:h-10 max-sm:w-10 ${darkMode ? "bg-white" : "bg-black"} z-20 ${sm ? 'max-sm:hidden' : 'sm:hidden'} hover:bg-[#69B3A2] `;
+  const size_icon =  30;
+  const string_className = `rounded-full flex place-content-center place-items-center h-12 w-12 max-sm:h-10 max-sm:w-10 ${darkMode ? "bg-white" : "bg-black"} z-20  hover:bg-[#69B3A2] `;
 
   // Determina el enlace y el ícono basado en el tipo recibido
   const getIconAndLink = () => {

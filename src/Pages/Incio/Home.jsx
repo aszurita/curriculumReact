@@ -20,8 +20,8 @@ function Home() {
                 <section id="presentations"><Presentations /></section>
                 <section id="contactme"><ContactMe /></section>
             </main>
-            <footer className={`h-10 w-full place-content-center place-items-center text-center text-xl py-10`}>
-                <div>
+            <footer className={`h-10 w-full place-content-center place-items-center text-center text-xl py-12`}>
+                <div className="">
                     Copyright © 2024 <a className="font-bold text-green-calid" href="#Home">Angelo Zurita</a>. All Rights Reserved.
                 </div>
             </footer>
